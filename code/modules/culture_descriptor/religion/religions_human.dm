@@ -1,63 +1,63 @@
 /decl/cultural_info/religion/other
 	name = RELIGION_OTHER
-	description = "Una de las numerosas religiones poco conocidas de la galaxia."
+	description = "One of the many, many niche or relatively unknown religions of the galaxy."
 
 /decl/cultural_info/religion/jewish
 	name = RELIGION_JUDAISM
-	description = "Una religion abrahamica monoteista seguida por el pueblo judio. A alguien que practica el Judaismo y es de la cultura judia se le llama 'judio'"
+	description = "An Abrahamic monotheistic religion held to by the Jewish people. Someone who practices Judaism and is of the Jewish culture is called a Jew."
 
 /decl/cultural_info/religion/hindu
 	name = RELIGION_HINDUISM
-	description = "Una religion india que abarca una gran variedad de tradiciones, creencias y practicas espirituales. A alguien que sigue el hinduismo se le llama 'hindu'."
+	description = "An Indian religion encompassing a variety of traditions, beliefs and spiritual practices. Someone who practices Hinduism is called a Hindu."
 
 /decl/cultural_info/religion/buddhist
 	name = RELIGION_BUDDHISM
-	description = "Una religion india que abarca una gran variedad de tradiciones, creencias y practicas espirituales basadas en las doctrinas del Buda. A alguien que sigue el budismo se le conoce como 'budista'."
+	description = "An Indian religion encompassing a variety of traditions, beliefs and spiritual practices based on the teachings of the Buddha. Someone who practices Buddhism is called a Buddhist."
 
 /decl/cultural_info/religion/jain
 	name = RELIGION_JAINISM
-	description = "Una religion india que habla de salvacion a traves de multiples vidas y pacifismo. A alguien que practica el jainismo se le conoce como 'jain'."
+	description = "An Indian religion that teaches salvation through successive lives and nonviolence. Someone who practices Jainism is called a Jain."
 
 /decl/cultural_info/religion/sikh
 	name = RELIGION_SIKHISM
-	description = "Una religion india monoteista basada en las doctrinas espirituales de Guru Nanak y los nueve gurues Sij que lo siguieron. A alguien que practica el sijismo se le llama 'sij'."
+	description = "An Indian monotheistic religion based on the spiritual teachings of Guru Nanak and the nine Sikh gurus that succeeded him. Someone who practicies Sikhism is called a Sikh."
 
 /decl/cultural_info/religion/muslim
 	name = RELIGION_ISLAM
-	description = "Una religion abrahamica monoteista que afirma que hay un solo Dios, y que Mahoma es su profeta. A alguien que practica el Islam se le conoce como un 'musulman'."
+	description = "An Abrahamic monotheistic religion teaching that there is only one God and that Muhammad is His prophet. Someone who practices Islam is called a Muslim."
 
 /decl/cultural_info/religion/christian
 	name = RELIGION_CHRISTIANITY
-	description = "Una religion abrahamica monoteista basada en la vida y doctrinas de Jesus de Nazaret. A alguien que practica el cristianismo se conoce como un 'cristiano'."
+	description = "An Abrahamic monotheistic religion based on the life and teachings of Jesus of Nazareth. Someone who practices Christianity is called a Christian."
 
 /decl/cultural_info/religion/bahai
 	name = RELIGION_BAHAI_FAITH
-	description = "Una religion abrahamica monoteista que sigue las doctrinas de Baha'u'llah y cree en paz y unidad universal. A alguien que practica la fe Baha'i se le llama 'Baha'i'."
+	description = "An Abrahamic monotheistic religion that follows the teachings of Baha'u'llah and believes in universal peace and unity. Someone who practices the Baha'i Faith is called a Baha'i."
 
 /decl/cultural_info/religion/agnostic
 	name = RELIGION_AGNOSTICISM
-	description = "La creencia de que nada es conocido o puede ser conocido de la naturaleza o existencia de un Dios. Los que se afilian al agnosticismo se llaman 'agnosticos'."
+	description = "A belief that nothing is known or can be known of the existence or nature of God. Someone who holds to agnosticism is called an agnostic."
 
 /decl/cultural_info/religion/deist
 	name = RELIGION_DEISM
-	description = "La creencia en la existencia de un ser supremo, especificamente de un creador que no interviene en el universo. Alguien que practica el deismo se llama 'deista'."
+	description = "A belief in the existence of a supreme being, specifically of a creator who does not intervene in the universe. Someone who practices deism is called a deist."
 
 /decl/cultural_info/religion/atheist
 	name = RELIGION_ATHEISM
-	description = "La falta de creencia en un Dios. Los que se afilian al ateismo se llaman 'ateos'."
+	description = "A lack of belief in a God. Someone who holds to atheism is called an atheist."
 
 /decl/cultural_info/religion/thelemite
 	name = RELIGION_THELEMA
-	description = "Una religion occidental esoterica concentrada en la ley de Thelema. A quien practica Thelema se le llama 'thelemita'."
+	description = "An esoteric Western religion focusing on the law of Thelema. Someone who practices Thelema is called a Thelemite."
 
 /decl/cultural_info/religion/spiritualism
 	name = RELIGION_SPIRITUALISM
-	description = "Una creencia basada en la comunicacion con espiritus muertos a traves de mediums. Los que se afilian al espiritualismo se llaman 'espiritualistas'."
+	description = "A belief based on communication with the spirits of the dead, especially through mediums. Someone who practices spiritualism is called a spiritualist."
 
 /decl/cultural_info/religion/shinto
 	name = RELIGION_SHINTO
-	description = "Una religion tradicional japonesa basada en rituales creados para hacer una conexion entre el pasado y el presente moderno. A quien practica el sintoismo se le llama 'sintoista'."
+	description = "A traditional Japanese religion based on rituals to create a connection between the past and modern day. Someone who practices Shinto is called a Shintoist."
 
 /decl/cultural_info/religion/taoist
 	name = RELIGION_TAOISM
-	description = "Una religion china tradicional que se centra en vivir en armonia con el Tao. A quien practica el taoismo se le llama 'taoista'."
+	description = "A traditional Chinese religion that emphasizes living in harmony with the Tao. Someone who practices Taoism is called a Taoist."

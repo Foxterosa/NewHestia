@@ -1,16 +1,16 @@
 
 /datum/gear/shoes
-	sort_category = "Zapatos y Calzado"
+	sort_category = "Shoes and Footwear"
 	slot = slot_shoes
 	category = /datum/gear/shoes
 
 /datum/gear/shoes/athletic
-	display_name = "Zapatillas atleticas, coloreables"
+	display_name = "athletic shoes, colour select"
 	path = /obj/item/clothing/shoes/athletic
 	flags = GEAR_HAS_COLOR_SELECTION
 
 /datum/gear/shoes/boots
-	display_name = "Botas varias"
+	display_name = "boot selection"
 	path = /obj/item/clothing/shoes
 
 /datum/gear/shoes/boots/New()
@@ -24,7 +24,7 @@
 	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(boots)
 
 /datum/gear/shoes/color
-	display_name = "Zapatos varios"
+	display_name = "shoe selection"
 	path = /obj/item/clothing/shoes
 
 /datum/gear/shoes/color/New()
@@ -46,21 +46,20 @@
 	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(shoes)
 
 /datum/gear/shoes/flats
-	display_name = "Zapatos planos, coloreables"
+	display_name = "flats, colour select"
 	path = /obj/item/clothing/shoes/flats
 	flags = GEAR_HAS_COLOR_SELECTION
 
 /datum/gear/shoes/high
-	display_name = "Zapatos high tops"
+	display_name = "high tops selection"
 	path = /obj/item/clothing/shoes/hightops
 	flags = GEAR_HAS_TYPE_SELECTION
 
 /datum/gear/shoes/sandal
-	display_name = "Sandalias de madera"
+	display_name = "wooden sandals"
 	path = /obj/item/clothing/shoes/sandal
 
 /datum/gear/shoes/heels
-	display_name = "Zapatos de taco alto, coloreables"
+	display_name = "high heels, colour select"
 	path = /obj/item/clothing/shoes/heels
 	flags = GEAR_HAS_COLOR_SELECTION
-

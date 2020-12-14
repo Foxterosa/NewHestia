@@ -5,7 +5,7 @@ var/global/list/all_objectives = list()
 	//Who owns the objective.
 	var/datum/mind/owner = null
 	//What that person is supposed to do.
-	var/explanation_text = "Nada"
+	var/explanation_text = "Nothing"
 	//If they are focused on a particular person.
 	var/datum/mind/target = null
 	//If they are focused on a particular number. Steal objectives have their own counter.
@@ -44,7 +44,7 @@ var/global/list/all_objectives = list()
 	if(target && target.current)
 		explanation_text = "Assassinate [target.current.real_name], the [target.assigned_role]."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 /datum/objective/assassinate/find_target_by_role(role, role_type = 0)
@@ -52,7 +52,7 @@ var/global/list/all_objectives = list()
 	if(target && target.current)
 		explanation_text = "Assassinate [target.current.real_name], the [!role_type ? target.assigned_role : target.special_role]."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 // Execute //
@@ -62,7 +62,7 @@ var/global/list/all_objectives = list()
 	if(target && target.current)
 		explanation_text = "[target.current.real_name], the [target.assigned_role] has extracted confidential information above their clearance. Execute \him[target.current]."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 /datum/objective/anti_revolution/execute/find_target_by_role(role, role_type = 0)
@@ -70,7 +70,7 @@ var/global/list/all_objectives = list()
 	if(target && target.current)
 		explanation_text = "[target.current.real_name], the [!role_type ? target.assigned_role : target.special_role] has extracted confidential information above their clearance. Execute \him[target.current]."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 */
 // Brig //
@@ -81,17 +81,17 @@ var/global/list/all_objectives = list()
 /datum/objective/anti_revolution/brig/find_target()
 	..()
 	if(target && target.current)
-		explanation_text = "Encarcela a [target.current.real_name], que trabaja de [target.assigned_role] en la prision por 20 minutos para darle una leccion."
+		explanation_text = "Brig [target.current.real_name], the [target.assigned_role] for 20 minutes to set an example."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 /datum/objective/anti_revolution/brig/find_target_by_role(role, role_type = 0)
 	..(role, role_type)
 	if(target && target.current)
-		explanation_text = "Encarcela a [target.current.real_name], que trabaja de [!role_type ? target.assigned_role : target.special_role] en la prision por 20 minutos para darle una leccion."
+		explanation_text = "Brig [target.current.real_name], the [!role_type ? target.assigned_role : target.special_role] for 20 minutes to set an example."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 // Demote //
@@ -99,17 +99,17 @@ var/global/list/all_objectives = list()
 /datum/objective/anti_revolution/demote/find_target()
 	..()
 	if(target && target.current)
-		explanation_text = "[target.current.real_name], en la ocupacion de [target.assigned_role], es una amenaza a los objetivos de [GLOB.using_map.company_name]. Baja el rango de [target.current] a asistente."
+		explanation_text = "[target.current.real_name], the [target.assigned_role]  has been classified as harmful to [GLOB.using_map.company_name]'s goals. Demote \him[target.current] to assistant."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 /datum/objective/anti_revolution/demote/find_target_by_role(role, role_type = 0)
 	..(role, role_type)
 	if(target && target.current)
-		explanation_text = "[target.current.real_name], en la ocupacion de [!role_type ? target.assigned_role : target.special_role], es una amenaza a los objetivos de [GLOB.using_map.company_name]. Baja el rango de [target.current] a asistente."
+		explanation_text = "[target.current.real_name], the [!role_type ? target.assigned_role : target.special_role] has been classified as harmful to [GLOB.using_map.company_name]'s goals. Demote \him[target.current] to assistant."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 // Debrain //
@@ -119,7 +119,7 @@ var/global/list/all_objectives = list()
 	if(target && target.current)
 		explanation_text = "Steal the brain of [target.current.real_name]."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 /datum/objective/debrain/find_target_by_role(role, role_type = 0)
@@ -127,7 +127,7 @@ var/global/list/all_objectives = list()
 	if(target && target.current)
 		explanation_text = "Steal the brain of [target.current.real_name] the [!role_type ? target.assigned_role : target.special_role]."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 */
 // Protection, The opposite of killing a dude. //
@@ -135,34 +135,34 @@ var/global/list/all_objectives = list()
 /datum/objective/protect/find_target()
 	..()
 	if(target && target.current)
-		explanation_text = "Protege a [target.current.real_name], que trabaja de [target.assigned_role]."
+		explanation_text = "Protect [target.current.real_name], the [target.assigned_role]."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 
 /datum/objective/protect/find_target_by_role(role, role_type = 0)
 	..(role, role_type)
 	if(target && target.current)
-		explanation_text = "Protege a [target.current.real_name], que trabaja de [!role_type ? target.assigned_role : target.special_role]."
+		explanation_text = "Protect [target.current.real_name], the [!role_type ? target.assigned_role : target.special_role]."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 // Hijack //
 
 /datum/objective/hijack
-	explanation_text = "Sabotea una nave de escape."
+	explanation_text = "Hijack a shuttle."
 
 // Shuttle Escape //
 
 /datum/objective/escape
-	explanation_text = "Escapa en una nave de evacuacion con tu vida y tu libertad."
+	explanation_text = "Escape on the shuttle or an escape pod alive and free."
 
 // Survive //
 
 /datum/objective/survive
-	explanation_text = "Sobrevive hasta el final."
+	explanation_text = "Stay alive until the end."
 
 // Brig, similar to the anti-rev objective, but for traitors //
 
@@ -172,17 +172,17 @@ var/global/list/all_objectives = list()
 /datum/objective/brig/find_target()
 	..()
 	if(target && target.current)
-		explanation_text = "Encarcela a [target.current.real_name], que trabaja de [target.assigned_role], por 10 minutos."
+		explanation_text = "Have [target.current.real_name], the [target.assigned_role] brigged for 10 minutes."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 /datum/objective/brig/find_target_by_role(role, role_type = 0)
 	..(role, role_type)
 	if(target && target.current)
-		explanation_text = "Encarcela a [target.current.real_name], que trabaja de [!role_type ? target.assigned_role : target.special_role], por 10 minutos."
+		explanation_text = "Have [target.current.real_name], the [!role_type ? target.assigned_role : target.special_role] brigged for 10 minutes."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 // Harm a crew member, making an example of them //
@@ -193,23 +193,23 @@ var/global/list/all_objectives = list()
 /datum/objective/harm/find_target()
 	..()
 	if(target && target.current)
-		explanation_text = "Dale una leccion a [target.current.real_name], en la ocupacion de [target.assigned_role]. Rompe uno de sus huesos, mutila sus extremidades o deforma su cara. Asegurate de que esten vivos mientras lo llevas a cabo."
+		explanation_text = "Make an example of [target.current.real_name], the [target.assigned_role]. Break one of their bones, detach one of their limbs or disfigure their face. Make sure they're alive when you do it."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 /datum/objective/harm/find_target_by_role(role, role_type = 0)
 	..(role, role_type)
 	if(target && target.current)
-		explanation_text = "Dale una leccion a [target.current.real_name], en la ocupacion de [!role_type ? target.assigned_role : target.special_role]. Rompe uno de sus huesos, mutila sus extremidades o deforma su cara. Asegurate de que esten vivos mientras lo llevas a cabo."
+		explanation_text = "Make an example of [target.current.real_name], the [!role_type ? target.assigned_role : target.special_role]. Break one of their bones, detach one of their limbs or disfigure their face. Make sure they're alive when you do it."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 // Nuclear Explosion //
 
 /datum/objective/nuclear
-	explanation_text = "Extrae recursos o bienes de la NTSS Dagon usando la amenaza de tu dispositivo nuclear. Toma rehenes, has ejemplos. Usa tu creatividad."
+	explanation_text = "Extract a ransom, or resources, from the NTSS Dagon with the threat of your nuclear device. Take hostages, make examples. Be creative."
 
 
 // Steal //
@@ -219,30 +219,30 @@ var/global/list/all_objectives = list()
 	var/target_name
 
 	var/global/possible_items[] = list(
-		"la pistola de energia de coleccionista del capitan" = /obj/item/weapon/gun/energy/captain,
-		"un generador de grietas bluespace" = /obj/item/integrated_circuit/manipulation/bluespace_rift,
-		"un RCD" = /obj/item/weapon/rcd,
-		"un jetpack" = /obj/item/weapon/tank/jetpack,
-		"una IA funcional" = /obj/item/weapon/aicard,
-		"un par de botas magneticas" = /obj/item/clothing/shoes/magboots,
-		"los planos de la [station_name()]" = /obj/item/blueprints,
-		"28 moles de phoron (un tanque lleno)" = /obj/item/weapon/tank,
-		"una muestra de extracto de un slime" = /obj/item/slime_extract,
-		"un filete de carne de corgi" = /obj/item/weapon/reagent_containers/food/snacks/meat/corgi,
-		"un hypospray" = /obj/item/weapon/reagent_containers/hypospray,
-		"el localizador del capitan" = /obj/item/weapon/pinpointer,
-		"un chaleco reforzado ablativo" = /obj/item/clothing/suit/armor/laserproof,
+		"the captain's antique laser gun" = /obj/item/weapon/gun/energy/captain,
+		"a bluespace rift generator" = /obj/item/integrated_circuit/manipulation/bluespace_rift,
+		"an RCD" = /obj/item/weapon/rcd,
+		"a jetpack" = /obj/item/weapon/tank/jetpack,
+		"a functional AI" = /obj/item/weapon/aicard,
+		"a pair of magboots" = /obj/item/clothing/shoes/magboots,
+		"the [station_name()] blueprints" = /obj/item/blueprints,
+		"28 moles of phoron (full tank)" = /obj/item/weapon/tank,
+		"a sample of slime extract" = /obj/item/slime_extract,
+		"a piece of corgi meat" = /obj/item/weapon/reagent_containers/food/snacks/meat/corgi,
+		"the hypospray" = /obj/item/weapon/reagent_containers/hypospray,
+		"the captain's pinpointer" = /obj/item/weapon/pinpointer,
+		"an ablative armor vest" = /obj/item/clothing/suit/armor/laserproof,
 	)
 
 	var/global/possible_items_special[] = list(
 		/*"nuclear authentication disk" = /obj/item/weapon/disk/nuclear,*///Broken with the change to nuke disk making it respawn on z level change.
-		"pistola nuclear" = /obj/item/weapon/gun/energy/gun/nuclear,
-		"taladro de diamante" = /obj/item/weapon/pickaxe/diamonddrill,
-		"bolso bluespace" = /obj/item/weapon/storage/backpack/holding,
-		"bateria de hiper capacidad" = /obj/item/weapon/cell/hyper,
-		"10 diamantes" = /obj/item/stack/material/diamond,
-		"50 lingotes de oro" = /obj/item/stack/material/gold,
-		"25 lingotes de uranio refinado" = /obj/item/stack/material/uranium,
+		"nuclear gun" = /obj/item/weapon/gun/energy/gun/nuclear,
+		"diamond drill" = /obj/item/weapon/pickaxe/diamonddrill,
+		"bag of holding" = /obj/item/weapon/storage/backpack/holding,
+		"hyper-capacity cell" = /obj/item/weapon/cell/hyper,
+		"10 diamonds" = /obj/item/stack/material/diamond,
+		"50 gold bars" = /obj/item/stack/material/gold,
+		"25 refined uranium bars" = /obj/item/stack/material/uranium,
 	)
 
 /datum/objective/steal/proc/set_target(item_name)
@@ -250,7 +250,7 @@ var/global/list/all_objectives = list()
 	steal_target = possible_items[target_name]
 	if (!steal_target )
 		steal_target = possible_items_special[target_name]
-	explanation_text = "Roba [target_name]."
+	explanation_text = "Steal [target_name]."
 	return steal_target
 
 
@@ -272,7 +272,7 @@ var/global/list/all_objectives = list()
 		if (!custom_name) return
 		target_name = custom_name
 		steal_target = custom_target
-		explanation_text = "Roba [target_name]."
+		explanation_text = "Steal [target_name]."
 	else
 		set_target(new_target)
 	return steal_target
@@ -282,7 +282,7 @@ var/global/list/all_objectives = list()
 /datum/objective/download
 	proc/gen_amount_goal()
 		target_amount = rand(10,20)
-		explanation_text = "Descarga [target_amount] niveles de investigacion."
+		explanation_text = "Download [target_amount] research levels."
 		return target_amount
 
 // Capture //
@@ -291,7 +291,7 @@ var/global/list/all_objectives = list()
 
 /datum/objective/capture/proc/gen_amount_goal()
 	target_amount = rand(5,10)
-	explanation_text = "Acumula [target_amount] puntos de captura."
+	explanation_text = "Accumulate [target_amount] capture points."
 	return target_amount
 
 // Changeling Absorb //
@@ -309,7 +309,7 @@ var/global/list/all_objectives = list()
 				n_p ++
 	target_amount = min(target_amount, n_p)
 
-	explanation_text = "Absorbe [target_amount] genes compatibles."
+	explanation_text = "Absorb [target_amount] compatible genomes."
 	return target_amount
 
 // Heist objectives.
@@ -337,9 +337,9 @@ var/global/list/all_objectives = list()
 		target = pick(possible_targets)
 
 	if(target && target.current)
-		explanation_text = "Podemos obtener una buena cantidad de dinero por [target.current.real_name], en la ocupacion de [target.assigned_role]. Secuestrale con vida."
+		explanation_text = "We can get a good price for [target.current.real_name], the [target.assigned_role]. Take them alive."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 /datum/objective/heist/loot/choose_target()
@@ -348,37 +348,37 @@ var/global/list/all_objectives = list()
 		if(1)
 			target = /obj/structure/particle_accelerator
 			target_amount = 6
-			loot = "un acelerador de particulas completo"
+			loot = "a complete particle accelerator"
 		if(2)
 			target = /obj/machinery/the_singularitygen
 			target_amount = 1
-			loot = "un generador de gravedad"
+			loot = "a gravitational generator"
 		if(3)
 			target = /obj/machinery/power/emitter
 			target_amount = 4
-			loot = "cuatro emitidores"
+			loot = "four emitters"
 		if(4)
 			target = /obj/machinery/nuclearbomb
 			target_amount = 1
-			loot = "una bomba nuclear"
+			loot = "a nuclear bomb"
 		if(5)
 			target = /obj/item/weapon/gun
 			target_amount = 6
-			loot = "seis armas"
+			loot = "six guns"
 		if(6)
 			target = /obj/item/weapon/gun/energy
 			target_amount = 4
-			loot = "cuatro armas de energia"
+			loot = "four energy guns"
 		if(7)
 			target = /obj/item/weapon/gun/energy/laser
 			target_amount = 2
-			loot = "dos armas laser"
+			loot = "two laser guns"
 		if(8)
 			target = /obj/item/weapon/gun/energy/ionrifle
 			target_amount = 1
-			loot = "un arma de iones"
+			loot = "an ion gun"
 
-	explanation_text = "El mercado estelar es duro. Roba [loot] para venderlo."
+	explanation_text = "It's a buyer's market out here. Steal [loot] for resale."
 
 /datum/objective/heist/salvage/choose_target()
 	switch(rand(1,8))
@@ -407,34 +407,34 @@ var/global/list/all_objectives = list()
 			target = MATERIAL_DIAMOND
 			target_amount = 20
 
-	explanation_text = "Desvalija la [station_name()] y escapa con [target_amount] [target]."
+	explanation_text = "Ransack the [station_name()] and escape with [target_amount] [target]."
 
 /datum/objective/heist/preserve_crew
-	explanation_text = "No dejes a nadie atras, vivo o muerto."
+	explanation_text = "Do not leave anyone behind, alive or dead."
 
 //Borer objective(s).
 /datum/objective/borer_survive
-	explanation_text = "Sobrevive en un anfitrion hasta el fin del turno."
+	explanation_text = "Survive in a host until the end of the round."
 
 /datum/objective/borer_reproduce
-	explanation_text = "Reproducete aunque sea una vez."
+	explanation_text = "Reproduce at least once."
 
 /datum/objective/ninja_highlander
-   explanation_text = "Ambicionas ser un Gran Maestro del Clan Aracnido. Mata a todos los otros acolitos."
+   explanation_text = "You aspire to be a Grand Master of the Spider Clan. Kill all of your fellow acolytes."
 
 /datum/objective/cult/survive
-	explanation_text = "No podemos permitir que nuestro conocimiento se pierda."
+	explanation_text = "Our knowledge must live on."
 	target_amount = 5
 
 /datum/objective/cult/survive/New()
 	..()
-	explanation_text = "No podemos permitir que nuestro conocimiento se pierda. Asegurate de que minimamente [target_amount] acolitos escapen para cuidarlo y esparcirlo."
+	explanation_text = "Our knowledge must live on. Make sure at least [target_amount] acolytes escape to spread their work."
 
 /datum/objective/cult/eldergod
-	explanation_text = "Invoca a Nar-Sie usando la runa correspondiente (Hell join self). Para que funcione correctamente, nueve cultistas deben estar parados en sus alrededores y sobre la runa en si. La runa de transformacion es 'join blood self'."
-// Respecto a las runas en ingles, no quiero confundir al jugador al elegirlas. Cuando se traduzca lo correspondiente al cult, vuelvo, uwu //
+	explanation_text = "Summon Nar-Sie via the use of the appropriate rune (Hell join self). It will only work if nine cultists stand on and around it. The convert rune is join blood self."
+
 /datum/objective/cult/sacrifice
-	explanation_text = "Realiza un sacrificio ritual para la gloriosa Nar-Sie."
+	explanation_text = "Conduct a ritual sacrifice for the glory of Nar-Sie."
 
 /datum/objective/cult/sacrifice/find_target()
 	var/list/possible_targets = list()
@@ -444,21 +444,20 @@ var/global/list/all_objectives = list()
 				possible_targets += player.mind
 	if(possible_targets.len > 0)
 		target = pick(possible_targets)
-	if(target) explanation_text = "Sacrifica a [target.name], en la ocupacion de [target.assigned_role]. Para lograrlo, necesitaras la runa de sacrificio (Hell blood join) y tres acolitos."
+	if(target) explanation_text = "Sacrifice [target.name], the [target.assigned_role]. You will need the sacrifice rune (Hell blood join) and three acolytes to do so."
 
 /datum/objective/rev/find_target()
 	..()
 	if(target && target.current)
-		explanation_text = "Asesina, captura o convierte a [target.current.real_name], en la ocupacion de [target.assigned_role]."
+		explanation_text = "Assassinate, capture or convert [target.current.real_name], the [target.assigned_role]."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
 
 /datum/objective/rev/find_target_by_role(role, role_type=0)
 	..(role, role_type)
 	if(target && target.current)
-		explanation_text = "Asesina, captura o convierte a [target.current.real_name], en la ocupacion de [!role_type ? target.assigned_role : target.special_role]."
+		explanation_text = "Assassinate, capture or convert [target.current.real_name], the [!role_type ? target.assigned_role : target.special_role]."
 	else
-		explanation_text = "Objetivo Libre"
+		explanation_text = "Free Objective"
 	return target
-	
