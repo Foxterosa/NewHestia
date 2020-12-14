@@ -1,69 +1,69 @@
 /datum/gear/accessory/custom_ribbon
-	display_name = "Liston customizado"
-	description = "Una condecoracion militar entregada a personal por sus... 'notables' logros."
+	display_name = "custom ribbon"
+	description = "A military decoration awarded to personnel for significant (or not) accomplishments."
 	path = /obj/item/clothing/accessory/ribbon/solgov/custom
 	cost = 2
 
 /datum/gear/accessory/custom_ribbon/color
-	display_name = "Liston customizado, coloreable"
+	display_name = "custom ribbon, colorable"
 	path = /obj/item/clothing/accessory/ribbon/solgov/custom/color
 	flags = GEAR_HAS_COLOR_SELECTION
 
 /datum/gear/accessory/armband_ma
-	display_name = "Brazalete de Maestro en Armas"
+	display_name = "master-at-arms brassard"
 	path = /obj/item/clothing/accessory/armband/solgov/ma
 	allowed_roles = SECURITY_ROLES
 
 /datum/gear/accessory/armband_mp
-	display_name = "Brazalete de Policia Militar"
+	display_name = "military police brassard"
 	path = /obj/item/clothing/accessory/armband/solgov/mp
 	allowed_roles = SECURITY_ROLES
 
 /datum/gear/accessory/smc_patch
-	display_name = "Parche de Fuerzas Marine"
+	display_name = "Marine Corps patch"
 	path = /obj/item/clothing/accessory/solgov/smc_patch
 	allowed_branches = list(/datum/mil_branch/marine_corps)
 	cost = 0
 	whitelisted = list(SPECIES_HUMAN, SPECIES_IPC)
 
 /datum/gear/accessory/smc_patch_xenos
-	display_name = "Parche de Fuerzas Marine (Division Xeno)"
+	display_name = "Marine Corps patch (xenoic division)"
 	path = /obj/item/clothing/accessory/solgov/smc_patch/xeno
 	cost = 0
 	allowed_branches = list(/datum/mil_branch/marine_corps)
 
 /datum/gear/tactical/civ_tag
-	display_name = "Identificador de civil"
+	display_name = "Civilian tag"
 	path = /obj/item/clothing/accessory/armor/tag/civ
 	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/tactical/med_tag
-	display_name = "Identificador de medico"
+	display_name = "Medical tag"
 	path = /obj/item/clothing/accessory/armor/tag/solgov/medic
 	allowed_skills = list(SKILL_MEDICAL = SKILL_BASIC)
 
 /datum/gear/tactical/med_tag/alt
-	display_name = "Identificador de medico (alternativo)"
+	display_name = "Medical tag, alt"
 	path = /obj/item/clothing/accessory/armor/tag/civ/med
 
 /datum/gear/accessory/tags/marine
-	display_name = "Placas de identificacion Marine"
-	description = "Placas de identificacion estandar hechas de un metal durarero. Este modelo es asignado a Marines."
+	display_name = "dog tags, solar marine corps"
+	description = "Plain identification tags made from a durable metal. This one is issued to marines."
 	path = /obj/item/clothing/accessory/badge/solgov/tags/marine
 	allowed_branches = list(/datum/mil_branch/marine_corps)
 	cost = 0
 
 /datum/gear/accessory/tags/fleet
-	display_name = "Placas de identificacion, Flota Expedicionaria"
-	description = "Placas de identificacion estandar hechas de un metal durarero. Este modelo es asignado a la Flota."
+	display_name = "dog tags, expeditionary fleet"
+	description = "Plain identification tags made from a durable metal. This one is issued to fleet."
 	path = /obj/item/clothing/accessory/badge/solgov/tags/fleet
 	allowed_branches = list(/datum/mil_branch/fleet)
 	cost = 0
 
 // Separating main's certain armor customization items.
 /datum/gear/tactical/blood_patch
-	display_name = "Parches de tipo de sangre"
-	description = "Una seleccion de parches que indican un tipo de sangre. Se acoplan al portaplacas."
+	display_name = "blood patch selection"
+	description = "A selection of blood type patches. Attaches to plate carrier."
 	path = /obj/item/clothing/accessory/armor/tag/
 	cost = 0 // Life-saving.
 
@@ -81,13 +81,13 @@
 	gear_tweaks += new/datum/gear_tweak/path(blood_type)
 
 /datum/gear/tactical/solgov
-	display_name = "Placa de bandera del GCS"
+	display_name = "SCG Flag tag"
 	path = /obj/item/clothing/accessory/armor/tag/solgov
 	allowed_branches = SOLGOV_BRANCHES
 	cost = 0 // Uniformed branches would require one.
 
 /datum/gear/tactical/nt
-	display_name = "Placa de NanoTrasen"
+	display_name = "NanoTrasen tag"
 	path = /obj/item/clothing/accessory/armor/tag/nt/dagon
 	allowed_branches = NT_BRANCHES
 	cost = 0 // Ditto.
@@ -173,12 +173,12 @@
 */
 // Grey carrier pouches. Only small ones to emulate standard suit/storage behavior.
 /datum/gear/tactical/armor_pouches_grey
-	display_name = "Morrales grises para armadura"
+	display_name = "grey armor pouches"
 	path = /obj/item/clothing/accessory/storage/pouches/grey
 	cost = 1
 
 /datum/gear/tactical/combatknife
-	display_name = "Cuchillo de combate"
+	display_name = "combat knife"
 	path = /obj/item/weapon/material/knife/combat
 	cost = 3
 	allowed_roles = ARMORED_ROLES
@@ -186,38 +186,38 @@
 
 // Too lazy to adjust outfit
 /datum/gear/accessory/nt_blaze
-	display_name = "Marcas de Conserje"
+	display_name = "blaze, janitor"
 	path = /obj/item/clothing/accessory/solgov/specialty/janitor
 	allowed_branches = NT_BRANCHES
 	allowed_roles = list(/datum/job/janitor)
 	cost = 0
 
 /datum/gear/accessory/nt_blaze/brig
-	display_name = "Marcas de Jefe de Brig"
+	display_name = "blaze, brig chief"
 	path = /obj/item/clothing/accessory/solgov/specialty/brig
 	allowed_roles = list(/datum/job/warden)
 
 /datum/gear/accessory/nt_blaze/detective
-	display_name = "Marcas forenses"
+	display_name = "blaze, forenscics"
 	path = /obj/item/clothing/accessory/solgov/specialty/forensic
 	allowed_roles = list(/datum/job/detective)
 
 /datum/gear/accessory/nt_blaze/atmos
-	display_name = "Marcas atmosfericas"
+	display_name = "blaze, atmospherics"
 	path = /obj/item/clothing/accessory/solgov/specialty/atmos
 	allowed_roles = ENGINEERING_ROLES
 
 /datum/gear/accessory/nt_blaze/chemist
-	display_name = "Marcas de Quimico"
+	display_name = "blaze, chemist"
 	path = /obj/item/clothing/accessory/solgov/specialty/chemist
 	allowed_roles = list(/datum/job/chemist)
 
 /datum/gear/accessory/nt_blaze/counselor
-	display_name = "Marcas de Consejero"
+	display_name = "blaze, counselor"
 	path = /obj/item/clothing/accessory/solgov/specialty/counselor
 	allowed_roles = list(/datum/job/psychiatrist)
 
 // Alternative cloak
 /datum/gear/clothing/cloak/alt
-	display_name = "Capa a color (alternativa)"
+	display_name = "cloak, colored (alt)"
 	path = /obj/item/clothing/accessory/cloak/boh

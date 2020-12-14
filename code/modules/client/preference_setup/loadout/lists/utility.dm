@@ -1,67 +1,67 @@
 // "Useful" items - I'm guessing things that might be used at work?
 /datum/gear/utility
-	sort_category = "Utilidad"
+	sort_category = "Utility"
 	category = /datum/gear/utility
 
 /datum/gear/utility/briefcase
-	display_name = "Maletin"
+	display_name = "briefcase"
 	path = /obj/item/weapon/storage/briefcase
 
 /datum/gear/utility/clipboard
-	display_name = "Portapapeles"
+	display_name = "clipboard"
 	path = /obj/item/weapon/material/clipboard
 
 /datum/gear/utility/folder
-	display_name = "Carpeta"
+	display_name = "folders"
 	path = /obj/item/weapon/folder
 
 /datum/gear/utility/taperecorder
-	display_name = "Grabadora"
+	display_name = "tape recorder"
 	path = /obj/item/device/taperecorder
 
 /datum/gear/utility/folder/New()
 	..()
 	var/folders = list()
-	folders["Carpeta azul"] = /obj/item/weapon/folder/blue
-	folders["Carpeta gris"] = /obj/item/weapon/folder
-	folders["Carpeta roja"] = /obj/item/weapon/folder/red
-	folders["Carpeta blanca"] = /obj/item/weapon/folder/white
-	folders["Carpeta amarilla"] = /obj/item/weapon/folder/yellow
+	folders["blue folder"] = /obj/item/weapon/folder/blue
+	folders["grey folder"] = /obj/item/weapon/folder
+	folders["red folder"] = /obj/item/weapon/folder/red
+	folders["white folder"] = /obj/item/weapon/folder/white
+	folders["yellow folder"] = /obj/item/weapon/folder/yellow
 	gear_tweaks += new/datum/gear_tweak/path(folders)
 
 /datum/gear/utility/paicard
-	display_name = "IA personal"
+	display_name = "personal AI device"
 	path = /obj/item/device/paicard
 
 /datum/gear/utility/camera
-	display_name = "Camara"
+	display_name = "camera"
 	path = /obj/item/device/camera
 
 /datum/gear/utility/photo_album
-	display_name = "Album de fotos"
+	display_name = "photo album"
 	path = /obj/item/weapon/storage/photo_album
 
 /datum/gear/utility/film_roll
-	display_name = "Rollo de camara"
+	display_name = "film roll"
 	path = /obj/item/device/camera_film
 
 /datum/gear/accessory/stethoscope
-	display_name = "Estetoscopio (medico)"
+	display_name = "stethoscope (medical)"
 	path = /obj/item/clothing/accessory/stethoscope
 	cost = 2
 
 /datum/gear/utility/pen
-	display_name = "Lapicera multicolor"
+	display_name = "Multicolored Pen"
 	path = /obj/item/weapon/pen/multi
 	cost = 2
 
 /datum/gear/utility/fancy
-	display_name = "Pluma elegante"
+	display_name = "Fancy Pen"
 	path = /obj/item/weapon/pen/fancy
 	cost = 2
 
 /datum/gear/utility/hand_labeler
-	display_name = "Etiquetadora de mano"
+	display_name = "hand labeler"
 	path = /obj/item/weapon/hand_labeler
 	cost = 3
 
@@ -70,37 +70,37 @@ modular computers
 ****************/
 
 /datum/gear/utility/cheaptablet
-	display_name = "Tablet barata"
+	display_name = "tablet computer, cheap"
 	path = /obj/item/modular_computer/tablet/preset/custom_loadout/cheap
 	cost = 2
 
 /datum/gear/utility/normaltablet
-	display_name = "Tablet avanzada"
+	display_name = "tablet computer, advanced"
 	path = /obj/item/modular_computer/tablet/preset/custom_loadout/advanced
 	cost = 3
 
 /datum/gear/utility/cheaplaptop
-	display_name = "Portatil barato"
+	display_name = "laptop computer, cheap"
 	path = /obj/item/modular_computer/laptop/preset/custom_loadout/cheap
 	cost = 3
 
 /datum/gear/utility/normallaptop
-	display_name = "Portatil avanzado"
+	display_name = "laptop computer, advanced"
 	path = /obj/item/modular_computer/laptop/preset/custom_loadout/advanced
 	cost = 4
 
 /datum/gear/utility/instrument
-	display_name = "Instrumentos Varios"
-	description = "Un instrumento para crear musica hermosa. Talento no incluido."
+	display_name = "Instrument Selection"
+	description = "An instrument to play beautiful music. Talent not included."
 	path = /obj/item/device/synthesized_instrument
 	cost = 4
 
 /datum/gear/utility/instrument/New()
 	..()
 	var/instruments = list()
-	instruments["Guitarra"] = /obj/item/device/synthesized_instrument/guitar
-	instruments["Guitarra electrica"] = /obj/item/device/synthesized_instrument/guitar/multi
-	instruments["Sintetizador"] = /obj/item/device/synthesized_instrument/synthesizer
-	instruments["Trompeta"] = /obj/item/device/synthesized_instrument/trumpet
+	instruments["Guitar"] = /obj/item/device/synthesized_instrument/guitar
+	instruments["Electric Guitar"] = /obj/item/device/synthesized_instrument/guitar/multi
+	instruments["Synthesizer"] = /obj/item/device/synthesized_instrument/synthesizer
+	instruments["Trumpet"] = /obj/item/device/synthesized_instrument/trumpet
 	instruments["Violin"] = /obj/item/device/synthesized_instrument/violin
 	gear_tweaks += new/datum/gear_tweak/path(instruments)

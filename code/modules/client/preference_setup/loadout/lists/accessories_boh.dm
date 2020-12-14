@@ -1,20 +1,20 @@
 /datum/gear/accessory/custom_medal
-	display_name = "Medallas customizables"
-	description = "Una seleccion de medallas, entregada al personal por sus... teoricamente 'notables' logros."
+	display_name = "custom medal"
+	description = "A selection of medals, awarded to personnel for significant (or not) accomplishments."
 	path = /obj/item/clothing/accessory/medal
 	cost = 2
 
 /datum/gear/accessory/custom_medal/New()
 	..()
 	var/cmedals = list()
-	cmedals["Medalla de hierro"] = /obj/item/clothing/accessory/medal/iron
-	cmedals["Medalla de bronce"] = /obj/item/clothing/accessory/medal/bronze
-	cmedals["Medalla de plata"] = /obj/item/clothing/accessory/medal/silver
-	cmedals["Medalla de oro"] = /obj/item/clothing/accessory/medal/gold
+	cmedals["iron"] = /obj/item/clothing/accessory/medal/iron
+	cmedals["bronze"] = /obj/item/clothing/accessory/medal/bronze
+	cmedals["silver"] = /obj/item/clothing/accessory/medal/silver
+	cmedals["gold"] = /obj/item/clothing/accessory/medal/gold
 	gear_tweaks += new/datum/gear_tweak/path(cmedals)
 
 /datum/gear/clothing/cloak
-	display_name = "Capa, coloreable"
+	display_name = "cloak, colored"
 	path = /obj/item/clothing/accessory/cloak
 	slot = slot_wear_suit
 	flags = GEAR_HAS_COLOR_SELECTION
